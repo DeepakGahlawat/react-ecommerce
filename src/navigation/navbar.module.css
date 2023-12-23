@@ -1,0 +1,42 @@
+/* navbar.module.css */
+
+.nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 1rem; /* Add some padding for better spacing */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Adjust the gap between list items */
+  margin: 0;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333; /* Adjust the color */
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Add a hover effect if desired */
+a:hover {
+  color: brown; /* Change the color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-end; /* Align items to the right */
+  }
+
+  ul {
+    gap: 0.5rem; /* Adjust the gap between list items on smaller screens */
+  }
+}

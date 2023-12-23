@@ -1,0 +1,71 @@
+/* home.module.css */
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: azure;
+  }
+  
+  h2{
+   font-family:cursive;
+    text-align: center;
+    font-size:xx-large;
+  }
+  
+  .productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Adjust alignment as needed */
+  }
+  
+  /* Style for each list item */
+  .li {
+    width: calc(33.33% - 20px); /* Assuming you want three items per row with some gap */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .li {
+      width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  
+    .productList {
+      justify-content: center; /* Center items on smaller screens */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .li {
+      width: 100%; /* One item per row on even smaller screens */
+    }
+  }
+  
+  .form {
+    margin-bottom: 20px;
+    width: auto;
+    gap: auto; 
+    width: auto;
+  }
+  
+  .label {
+    font-size: 1em;
+    width: auto;
+    
+    
+  }
+  
+  .input {
+    width: auto;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 4px;
+  }
+  
+  
+  /* Additional styling for Filter */
+
+  

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./navigation/Navbar";
+import Cart from "./cart/Cart";
+import Home from "./home/Home";
+import Login from "./log_in/Login";
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+     localStorage.clear();
+  }, []);
+  const isLoggedIn = !!localStorage.getItem('token')
+  const [login, setLogin] = useState(isLoggedIn)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>  
+      <div>
+        <Navbar />
+        
+          <Routes>
+            <Route path="/" element={<Login login={login} setLogin={setLogin} />} />
+            <Route path="/home" element={<Home login={login}/>} />
+            <Route path="/cart" element={<Cart login={login}/>} />
+          </Routes>
+        
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

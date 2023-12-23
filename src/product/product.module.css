@@ -1,0 +1,55 @@
+/* Product Styles */
+.product {
+  border: 1px solid magenta;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+}
+
+.product h3 {
+  margin-bottom: 10px;
+  color: cyan;
+}
+
+.product p {
+  margin: 5px 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.product button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .product {
+    padding: 15px;
+  }
+
+  .product h3 {
+    font-size: 18px;
+  }
+
+  .product p {
+    font-size: 14px;
+  }
+
+  .product button {
+    font-size: 14px;
+  }
+}
